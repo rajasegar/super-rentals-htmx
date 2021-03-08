@@ -11,4 +11,27 @@ block content
       input(class="ember-text-field ember-view light", type="text")
 
     ul.results
+      each rental in rentals
+        li
+          article.rental
+            button.image(type="button")
+              img(src=rental.attributes.image, alt="")
+              small View Larger
+            .details
+              h3
+                a(href='/rentals/' + rental.id) #{rental.attributes.title}
+              .detail.owner
+                span Owner:
+                | #{rental.attributes.owner}
+              .detail.type
+                span Type:
+                | #{rental.attributes.category}
+              .detail.location
+                span Location:
+                | #{rental.attributes.city}
+              .detail.bedrooms
+                span Bedrooms:
+                | #{rental.attributes.bedrooms}
+            .map
+              img(alt="", src="", width="150",height="150")
     

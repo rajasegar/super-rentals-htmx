@@ -3,12 +3,14 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+const _rentals = require('./data/rentals.json');
+
 app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/assets'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { rentals: _rentals.data });
 });
 
 app.get('/about', (req, res) => {
