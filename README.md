@@ -15,7 +15,7 @@ npm start
 
 ![demo gif](demo.gif)
 
-You might need to add [Mapbox]() token to a `.env` file like below
+You might need to add [Mapbox](https://mapbox.com) token to a `.env` file like below
 ```
 MAPBOX_ACCESS_TOKEN=xxxxx-xxxxxx-xxxxx
 ```
