@@ -6,9 +6,9 @@ block content
     p Nice find! This looks like a nice place to stay near #{data.attributes.city}.
     a.button.share(href="#") Share on Twitter
   article.rental.detailed
-    button.image(type="button")
+    button.image(type="button", _="on click toggle .large then if #view-caption.textContent === 'View Larger' then set #view-caption.textContent to 'View Smaller' else set #view-caption.textContent to 'View Larger'")
       img(src=data.attributes.image, alt='An image of ' + data.attributes.title)
-      small View Larger
+      small#view-caption View Larger
     .details
       h3 #{data.attributes.title}
       .detail.owner
