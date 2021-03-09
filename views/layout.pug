@@ -1,10 +1,11 @@
 doctype html
 html(lang="en")
   head
-    title Super Rentals - htmx version
-    link(rel="stylesheet",href="styles.css")
+    title Super Rentals - htmx
+    link(rel="stylesheet",href="/styles.css")
+    script(src="https://unpkg.com/htmx.org")
   body
-    .container
+    .container(hx-boost="true")
       nav.menu
         a(href="/") 
           h1 Super Rentals

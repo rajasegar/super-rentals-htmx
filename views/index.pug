@@ -1,21 +1,21 @@
 extends layout
 block content
   .jumbo
-    .right.tomster
+    .right
     h2 Welcome to Super Rentals!
     p We hope you find exactly what you're looking for in a place to stay.
     a.button(href="/about") About Us
   .rentals
     label
       span Where would you like to stay?
-      input(class="ember-text-field ember-view light", type="text")
+      input.light(type="text")
 
     ul.results
       each rental in rentals
         li
           article.rental
             button.image(type="button")
-              img(src=rental.attributes.image, alt="")
+              img(src=rental.attributes.image, alt='An image of ' + rental.attributes.title)
               small View Larger
             .details
               h3
@@ -33,5 +33,5 @@ block content
                 span Bedrooms:
                 | #{rental.attributes.bedrooms}
             .map
-              img(alt="", src="", width="150",height="150")
+              img(alt='A map of ' + rental.attributes.title, src=rental.mapbox, width="150",height="150")
     

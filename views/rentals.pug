@@ -1,0 +1,30 @@
+extends layout
+block content
+  .jumbo
+    .right.tomster
+    h2 #{data.attributes.title}
+    p Nice find! This looks like a nice place to stay near #{data.attributes.city}.
+    a.button.share(href="#") Share on Twitter
+  article.rental.detailed
+    button.image(type="button")
+      img(src=data.attributes.image, alt='An image of ' + data.attributes.title)
+      small View Larger
+    .details
+      h3 #{data.attributes.title}
+      .detail.owner
+        span Owner:
+        | #{data.attributes.owner}
+      .detail.type
+        span Type:
+        | #{data.attributes.category}
+      .detail.location
+        span Location:
+        | #{data.attributes.city}
+      .detail.bedrooms
+        span Bedrooms:
+        | #{data.attributes.bedrooms}
+      .detail.description
+        p #{data.attributes.description}
+    .map
+      img.large(alt='A map of ' + data.attributes.title, src=data.mapbox, width="894",height="600")
+
