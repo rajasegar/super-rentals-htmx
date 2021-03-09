@@ -4,4 +4,20 @@ Super Rentals demo application built with [htmx](https://htmx.org) and [hyperscr
 
 You can view the demo app live [here](https://super-rentals-htmx.herokuapp.com)
 
+## Usage
+Clone this repo, install dependencies and start the app
+```
+git clone https://github.com/rajasegar/super-rentals-htmx.git
+cd super-rentals-htmx
+npm install
+npm start
+```
+
+![demo gif](demo.gif)
+
+You might need to add [Mapbox]() token to a `.env` file like below
+```
+MAPBOX_ACCESS_TOKEN=xxxxx-xxxxxx-xxxxx
+```
+
 
