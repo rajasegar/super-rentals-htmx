@@ -1,4 +1,5 @@
 dependencies:
+  body-parser: 1.19.0
   dotenv: 8.2.0
   express: 4.17.1
   pug: 3.0.2
@@ -1495,6 +1496,7 @@ packages:
     resolution:
       integrity: sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
 specifiers:
+  body-parser: ^1.19.0
   dotenv: ^8.2.0
   express: ^4.17.1
   nodemon: ^2.0.7
