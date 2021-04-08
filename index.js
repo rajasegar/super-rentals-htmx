@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const pug = require('pug');
+const compression = require('compression');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/assets'));
+app.use(compression());
 
 app.get('/', (req, res) => {
   _rentals.data.forEach(r => {
